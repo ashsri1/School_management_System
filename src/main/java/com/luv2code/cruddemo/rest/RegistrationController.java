@@ -9,11 +9,11 @@ import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
-public class RestController {
+public class RegistrationController {
 
    private RegistrationService registrationService;
 
-   public RestController(RegistrationService theRegistrationService){
+   public RegistrationController(RegistrationService theRegistrationService){
 
        registrationService=theRegistrationService;
    }
@@ -63,3 +63,4 @@ public class RestController {
        return "Deleted registration id - " + registrationId;
         }
 }
+

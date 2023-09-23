@@ -43,6 +43,7 @@ public class RegistrationServiceImpl implements RegistrationService{
     @Transactional
     @Override
     public Registration save(Registration theRegistration) {
+
         return registrationRepository.save(theRegistration);
     }
 
