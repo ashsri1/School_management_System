@@ -8,7 +8,7 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "teacher_id")
+    @Column(name = "teacher_id")
     private int teacher_id;
 
     @Column(name = "name")
@@ -20,7 +20,10 @@ public class Teacher {
     @Column(name = "contact")
     private int contact;
 
-    public Teacher (){
+   // @OneToOne(mappedBy = "teacher")
+    //private Class_Room classRoom;
+
+    public Teacher() {
 
     }
 
@@ -28,6 +31,7 @@ public class Teacher {
         this.name = name;
         this.email = email;
         this.contact = contact;
+     //   this.classRoom = classRoom;
     }
 
     public int getTeacher_id() {
@@ -62,6 +66,16 @@ public class Teacher {
         this.contact = contact;
     }
 
+  /*  public Class_Room getClassRoom() {
+        return classRoom;
+    }
+
+    public void setClassRoom(Class_Room classRoom) {
+        this.classRoom = classRoom;
+    }
+
+   */
+
     @Override
     public String toString() {
         return "Teacher{" +
@@ -69,6 +83,7 @@ public class Teacher {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", contact=" + contact +
+               // ", classRoom=" + classRoom +
                 '}';
     }
 }

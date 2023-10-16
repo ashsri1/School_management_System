@@ -33,7 +33,7 @@ public class TeacherController {
         }
         return theTeacher;
     }
-    @OneToMany
+
     @PostMapping("/teacher")
     public Teacher addteacher(@RequestBody Teacher theTeacher){
         theTeacher.setTeacher_id(0);

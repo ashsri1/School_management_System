@@ -41,6 +41,7 @@ public class AdmissionServiceImpl implements AdmissionService{
     @Transactional
     @Override
     public Admission save(Admission theAdmission) {
+
         return admissionRepository.save(theAdmission);
     }
 

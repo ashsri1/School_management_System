@@ -47,6 +47,21 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>entity</groupId>
+			<artifactId>entity-txn</artifactId>
+			<version>0.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>entity</groupId>
+			<artifactId>entity-txn</artifactId>
+			<version>0.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>entity</groupId>
+			<artifactId>entity-sql</artifactId>
+			<version>0.1.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
