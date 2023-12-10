@@ -3,6 +3,8 @@ package com.luv2code.cruddemo.rest;
 import com.luv2code.cruddemo.Service.AdmissionService;
 import com.luv2code.cruddemo.entity.Admission;
 import com.luv2code.cruddemo.entity.Registration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,8 @@ import java.util.List;
 @RequestMapping("/api")
 public class AdmissionContoller {
 
+    Logger logger=LoggerFactory.getLogger(AdmissionContoller.class);
+
     private AdmissionService admissionService;
 
     public AdmissionContoller (AdmissionService theAdmissionService) {
@@ -21,8 +25,11 @@ public class AdmissionContoller {
         admissionService = theAdmissionService;
     }
 
+
     @GetMapping("/admission")
     public List<Admission> findAll() {
+
+        logger.info("Starting to get all admission method with info log level");
 
         return admissionService.findAll();
     }

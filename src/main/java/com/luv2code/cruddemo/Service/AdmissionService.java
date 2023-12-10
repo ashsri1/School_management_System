@@ -12,6 +12,10 @@ public interface AdmissionService {
 
     Admission save(Admission theAdmission);
 
-    void deleById(int theId);
+    Object deleById(int theId);
+
+
+
+
 
 }

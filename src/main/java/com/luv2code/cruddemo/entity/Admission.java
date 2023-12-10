@@ -10,16 +10,16 @@ public class Admission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="stud_id")
+    @Column(name = "stud_id")
     private int stud_id;
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name="previ_school")
+    @Column(name = "previ_school")
     private String previ_school;
 
-    @Column(name="age")
+    @Column(name = "age")
     private int age;
 
     @Column(name = "admission_date")
@@ -34,12 +34,16 @@ public class Admission {
     @Column(name = "email")
     private String email;
 
-    public Admission(){
+    @Column(name = "is_deleted")
+    private Boolean is_deleted;
+
+
+    public Admission() {
 
 
     }
 
-    public Admission(String name, String previ_school, int age, Date admission_date, String father_name, int contact, String email) {
+    public Admission(String name, String previ_school, int age, Date admission_date, String father_name, int contact, String email, Boolean is_deleted) {
         this.name = name;
         this.previ_school = previ_school;
         this.age = age;
@@ -47,6 +51,7 @@ public class Admission {
         this.father_name = father_name;
         this.contact = contact;
         this.email = email;
+        this.is_deleted = is_deleted;
     }
 
     public int getStud_id() {
@@ -113,17 +118,27 @@ public class Admission {
         this.email = email;
     }
 
+    public Boolean getIs_deleted() {
+        return is_deleted;
+    }
+
+    public boolean setIs_deleted(Boolean is_deleted) {
+        this.is_deleted = is_deleted;
+        return is_deleted;
+    }
+
     @Override
     public String toString() {
-        return "admission{" +
+        return "Admission{" +
                 "stud_id=" + stud_id +
                 ", name='" + name + '\'' +
                 ", previ_school='" + previ_school + '\'' +
                 ", age=" + age +
                 ", admission_date=" + admission_date +
-                ", father_name=" + father_name +
+                ", father_name='" + father_name + '\'' +
                 ", contact=" + contact +
-                ", email=" + email +
+                ", email='" + email + '\'' +
+                ", is_deleted=" + is_deleted +
                 '}';
     }
 }
